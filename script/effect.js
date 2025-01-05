@@ -288,10 +288,12 @@ $(function () {
     $('main').removeClass('loaded'); // 등장 애니메이션 제거
     setTimeout(function () {
       window.location.href = target; // 페이지 이동
+    }, 500); // transition과 일치하는 시간 설정
+    setTimeout(function() {
       $('main').addClass('loaded');
       $('.subCategory').fadeOut()
       $('.subMain').fadeIn()
-    }, 500); // transition과 일치하는 시간 설정
+    }, 600)
   });
 });
 
